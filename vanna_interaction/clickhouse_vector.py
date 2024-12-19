@@ -67,18 +67,12 @@ class ClickHouse_VectorStore(VannaBase):
         """)
 
     # def generate_embedding(self, data: str, **kwargs) -> List[float]:
-    #     try:
     #         embedding = self.embedding_function(data)
     #         return embedding
-    #     except Exception as e:
-    #         raise RuntimeError(f"Error generating embedding: {e}")
 
     def generate_embedding(self, data: str, **kwargs) -> List[float]:
-        try:
-            embedding = ollama.embeddings(model="llama3.2", prompt=data)
-            return embedding['embedding']
-        except Exception as e:
-            raise RuntimeError(f"Error generating embedding: {e}")
+        embedding = ollama.embeddings(model="llama3.2", prompt=data)
+        return embedding['embedding']
 
     def add_question_sql(self, question: str, sql: str, **kwargs) -> str:
         id = deterministic_uuid(question) + "-sql"
