@@ -164,10 +164,10 @@ vn = MyVanna(config={'model': 'llama3.2'})
 
 ############ Tests ###########
 
-vn.connect_to_clickhouse(host='by8y1h0mfc.us-west-2.aws.clickhouse.cloud',
+vn.connect_to_clickhouse(host='',
                             dbname='default',
                             user='default',
-                            password='u.XyyiQGvIUB2',
+                            password='',
                             port=8443)
 
 # df_ddl = vn.run_sql('SELECT * FROM vmCloud_data')
