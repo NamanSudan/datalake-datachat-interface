@@ -1,0 +1,7 @@
+chromadb==0.5.23
+clickhouse-connect==0.8.9
+Flask==3.1.0
+ollama==0.3.3
+pandas==2.2.3
+vanna==0.7.5
+vllm==0.6.4.post1
