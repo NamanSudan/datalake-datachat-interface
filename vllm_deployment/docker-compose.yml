@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  vllm:
+    build:
+      context: .
+      dockerfile: Dockerfile.arm
+    image: vllm-arm:latest
+    container_name: vllm-arm
+    restart: unless-stopped
+    environment:
+      - HUGGING_FACE_TOKEN=${HUGGING_FACE_TOKEN:-}
+      - ENABLE_QUANTIZATION=false
+      - MAX_MODEL_LEN=2048
+      - API_PORT=8000
+      - NEURON_CONTEXT_LENGTH_BUCKETS=128,512,1024,2048
+      - NEURON_TOKEN_GEN_BUCKETS=128,512,1024,2048
+    volumes:
+      - ./models:/app/models:rw
+      - ./data:/app/data:rw
+    ports:
+      - "${API_PORT:-8000}:8000"
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 16G
+    command: >
+      sh -c "python3.11 -m scripts.setup_vllm &&
+             python3.11 -m vllm.entrypoints.openai.api_server 
+             --host ${API_HOST:-0.0.0.0} 
+             --port ${API_PORT:-8000} 
+             --model ${MODEL_PATH}"

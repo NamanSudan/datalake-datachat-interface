@@ -1,0 +1,13 @@
+torch>=2.0.0
+transformers>=4.31.0
+vllm==0.3.3
+accelerate>=0.21.0
+bitsandbytes>=0.41.1
+safetensors>=0.3.1
+sentencepiece>=0.1.99
+tokenizers>=0.13.3
+numpy>=1.24.4
+pandas>=2.0.3
+pydantic>=2.0.3
+tqdm>=4.65.0
+huggingface-hub>=0.19.0
