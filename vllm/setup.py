@@ -2,8 +2,7 @@ import os
 from setuptools import setup, find_packages
 
 # Read requirements.txt
-# with open("requirements.txt") as f:
-with open("vllm/requirements.txt") as f:
+with open("requirements.txt") as f:
     requirements = [line.strip() for line in f if line.strip() and not line.startswith("--")]
 
 # Get version from environment or default to development version
