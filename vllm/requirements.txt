@@ -1,13 +1,3 @@
-# Existing Vanna requirements
-chromadb==0.5.23
-clickhouse-connect==0.8.9
-Flask==3.1.0
-ollama==0.3.3
-pandas==2.2.3
-vanna==0.7.5
-vllm==0.6.4.post1
-
-# vLLM requirements
 --extra-index-url https://download.pytorch.org/whl/cpu
 
 # Core dependencies
@@ -32,4 +22,4 @@ setuptools_scm>=8.0.0
 sentencepiece>=0.1.99
 tokenizers>=0.13.0
 accelerate>=0.21.0
-xformers>=0.0.22
+xformers>=0.0.22 
