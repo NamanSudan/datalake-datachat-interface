@@ -1,6 +1,7 @@
 constraints.txt
 requirements.txt
 setup.py
+vllm/__init__.py
 vllm.egg-info/PKG-INFO
 vllm.egg-info/SOURCES.txt
 vllm.egg-info/dependency_links.txt
