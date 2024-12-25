@@ -21,5 +21,4 @@ setuptools_scm>=8.0.0
 # Optional dependencies for enhanced functionality
 sentencepiece>=0.1.99
 tokenizers>=0.13.0
-accelerate>=0.21.0
-xformers>=0.0.22 
+accelerate>=0.21.0 
