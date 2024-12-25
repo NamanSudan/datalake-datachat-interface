@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: vllm
+Version: 0.0.1.dev0
+Summary: A high-throughput and memory-efficient inference engine for LLMs
+Home-page: https://github.com/vllm-project/vllm
+Author: vLLM Team
+Author-email: team@vllm.ai
+License: Apache-2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: torch==2.0.0
+Requires-Dist: transformers>=4.34.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: fastapi>=0.100.0
+Requires-Dist: uvicorn>=0.23.0
+Requires-Dist: pydantic>=2.0
+Requires-Dist: ray>=2.7.0
+Requires-Dist: typing_extensions>=4.5.0
+Requires-Dist: cmake>=3.26
+Requires-Dist: wheel
+Requires-Dist: packaging
+Requires-Dist: ninja
+Requires-Dist: setuptools>=61.0.0
+Requires-Dist: setuptools_scm>=8.0.0
+Requires-Dist: sentencepiece>=0.1.99
+Requires-Dist: tokenizers>=0.13.0
+Requires-Dist: accelerate>=0.21.0
